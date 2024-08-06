@@ -1,0 +1,77 @@
+/* style.css */
+
+/* Header Section Styles */
+header {
+    color: white;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header nav {
+    margin-top: 1rem;
+}
+
+header nav a {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+/* Section Styles */
+section {
+    margin-top: 2rem;
+}
+
+/* About Section Styles */
+#about {
+    background: linear-gradient(to right, #0c75c1, #bbdefb);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Skill Cards */
+.skill-card {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Success Message */
+#form-message {
+    font-size: 1rem;
+}
+
+/* Testimonials */
+.testimonial {
+    margin-bottom: 1rem;
+}
+
+/* General Styling */
+img {
+    max-width: 100%;
+}
