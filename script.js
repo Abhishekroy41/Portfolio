@@ -1,11 +1,24 @@
-// script.js
+(function(){
+    emailjs.init("abhiroy8986@gmail.com");
+})();
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+const contactForm = document.getElementById("contact-form");
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-    // Display success message
-    document.getElementById('form-message').classList.remove('hidden');
-    
-    // Optionally, you can clear the form fields here
-    document.getElementById('contact-form').reset();
+    emailjs.send("service_q6yh4j7", "template_iq9y9w4", {
+        from_name: name,
+        from_email: email,
+        message: message
+    })
+    .then(function(response) {
+        document.getElementById("form-message").textContent = "Message sent successfully!";
+        contactForm.reset();
+    }, function(error) {
+        document.getElementById("form-message").textContent = "Failed to send message. Please try again.";
+        console.error("EmailJS Error:", error);
+    });
 });
